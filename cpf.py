@@ -21,11 +21,12 @@ contrário disso:
     resultado é o valor da conta
 """
 #Primeiro digito do CPF
-cpf_primeiro = '143762994'
+cpf_primeiro = '143.762.994-'.replace('.', '').replace('-', '')
 num_soma = 11
 soma = 0
 soma_result = 0
-for digitos in cpf_primeiro:
+
+for digitos in cpf_primeiro: 
     if num_soma > 2:
         num_soma -= 1
         mult = num_soma * int(digitos)
@@ -36,7 +37,7 @@ if result_primeiro > 9:
     print(0)
 
 #Segundo digito do CPF
-cpf_segundo = '1437629946'
+cpf_segundo = '143.762.994-6'.replace('.', '').replace('-', '') 
 quant_digitos = 11
 soma_mult = 0
 
@@ -47,6 +48,7 @@ for digitos in cpf_segundo:
 mult_result = soma_mult * 10
 result_segundo = mult_result % 11
 
+#Resultado final do cpf 
 cpf_formatado = f'{cpf_primeiro[:3]}.{cpf_primeiro[3:6]}.{cpf_primeiro[6:9]}'
 
 cpf_final_usuario = f'{cpf_formatado}' + f'-{result_primeiro}' + f'{result_segundo}'

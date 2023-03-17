@@ -20,12 +20,17 @@ Se o resultado anterior for maior que 9:
 contrário disso:
     resultado é o valor da conta
 """
+import sys
+
 #Primeiro digito do CPF
-cpf_primeiro = '143.762.994-'.replace('.', '').replace('-', '')
+cpf_primeiro = input('digite os nove primeiros digitos do seu cpf: ')
 num_soma = 11
 soma = 0
 soma_result = 0
 
+if len(cpf_primeiro) > 9 or len(cpf_primeiro) < 9:
+    print('Pfvr informe nove digitos.')
+    sys.exit()
 for digitos in cpf_primeiro: 
     if num_soma > 2:
         num_soma -= 1

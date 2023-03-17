@@ -57,5 +57,5 @@ result_segundo = mult_result % 11
 cpf_formatado = f'{cpf_primeiro[:3]}.{cpf_primeiro[3:6]}.{cpf_primeiro[6:9]}'
 
 cpf_final_usuario = f'{cpf_formatado}' + f'-{result_primeiro}' + f'{result_segundo}'
-print(cpf_final_usuario)
+print(f'Seu cpf é: {cpf_final_usuario}')
 # print(f'o seu cpf é 143762994' + f'-{result_primeiro}'+f'{result_segundo}')

@@ -17,21 +17,21 @@ for digitos in cpf_nove_digitos:
 soma_result = soma * 10
 result_primeiro = soma_result % 11
 if result_primeiro > 9:
-    print(0)
+    result_primeiro = 0
 
 #Segundo digito do CPF
 cpf_nove_digitos = cpf_nove_digitos.replace('.', '').replace('-', '') 
 quant_digitos = 11
 soma_mult = 0
-
 for digitos in cpf_nove_digitos:
     mult = quant_digitos * int(digitos)
     quant_digitos -= 1
     soma_mult += mult
 mult_result = soma_mult * 10
 result_segundo = mult_result % 11
+if result_segundo > 9:
+    result_segundo = 0
 
-#Resultado final do cpf 
-cpf_formatado = f'{cpf_nove_digitos[:3]}.{cpf_nove_digitos[3:6]}.{cpf_nove_digitos[6:9]}'
-cpf_final_usuario = f'{cpf_formatado}' + f'-{result_primeiro}' + f'{result_segundo}'
-print(f'Seu cpf é: {cpf_final_usuario}')
+# Resultado final do cpf 
+cpf_formatado = f'{cpf_nove_digitos[:3]}.{cpf_nove_digitos[3:6]}.{cpf_nove_digitos[6:9]}-{result_primeiro}{result_segundo}'
+print(f'cpf: {cpf_formatado}')

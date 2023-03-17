@@ -6,7 +6,7 @@ for digitos_gerados in range(9):
     cpf_nove_digitos += str(random.randint(0, 9))
 
 #Primeiro digito do CPF 
-num_soma = 11
+num_soma = 10
 soma = 0
 soma_result = 0
 for digitos in cpf_nove_digitos: 
